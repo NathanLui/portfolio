@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    // background: whitesmoke;
+}
+
+p {
+    font-family: $secondaryFont
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+h1,
+h2 {
+    font-family: $mainFont;
+}
+
+.wrapper {
+    width: 1200px;
+    max-width: 90%;
+	margin: 0 auto;
+}

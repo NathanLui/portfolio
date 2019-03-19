@@ -1,0 +1,113 @@
+.contactTitle {
+    position: relative;
+    z-index: 10;
+    background: #F9F9F9;
+    // height: 20vh;
+    &:before,
+    &:after{
+    background: inherit;
+    content: '';
+    display: block;
+    height: 80%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -10;
+    bottom: 0px;
+    transform: skewY(-3.0deg);
+    transform-origin: 100%;
+  }
+
+   &:before {
+    bottom: 80px;
+    transform: skewY(-3.0deg);
+    height: 100%;
+    transform-origin: 100% 0;
+  }
+}
+
+.contact {
+    margin-top: 8%;
+}
+
+.contactTitle h2 {
+    font-size: 5rem;
+}
+
+.contactTitle h3 {
+    font-size: 2.5rem;
+}
+
+.contact textarea {
+    width: 400px;
+}
+
+.contact {
+    width: 100%;
+}
+
+.contactInfo input {
+    width: 477px;
+    background: #262626;
+    border: none;
+    border-bottom: 2px solid $accentColor;
+    height: 70px;
+}
+
+
+.contactForm {
+    background: #262626;
+    height: 60vh;
+    padding-top: 6%;
+    
+    textarea {
+        border: 2px solid $accentColor;
+        background: #262626;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding-top: 2%;
+        padding-left: 1%;
+        color: $textColor;
+        font-size: 4rem;
+        resize: none;
+        width: 100%;
+    }
+
+    h3 {
+        color: $textColor;
+        font-size: 3.5rem;
+    }
+}
+
+.contactForm {
+    position: relative;
+    // height: 20vh;
+    &:after{
+    background: inherit;
+    content: '';
+    display: block;
+    height: 25%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -10;
+    bottom: 0px;
+    transform: skewY(-3.0deg);
+    transform-origin: 100%;
+  }
+}
+
+
+::placeholder {
+    font-size: 2rem;
+    color: $textColor;
+}
+
+.formFlexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+

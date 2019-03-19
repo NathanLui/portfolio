@@ -1,0 +1,28 @@
+.footer {
+    height: 15vh;
+    background: grey;
+    padding-top: 5%;
+    z-index: -105;
+    position: absolute;
+    width: 100%;
+}
+
+.footer p {
+    font-family: $secondaryFont;
+    color: $textColor;
+    font-size: 2rem;
+}
+.footer i {
+    color: $textColor;
+    font-size: 3rem;
+    margin: 0 5px;
+}
+
+.footerBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconList {
+    display: flex;
+}

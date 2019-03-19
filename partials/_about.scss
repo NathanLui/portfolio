@@ -1,0 +1,46 @@
+.about {
+    background: #FDF0DF;
+    height: 60vh;
+    padding-top: 9%;
+}
+.aboutBox {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        color:#A79E8F;
+        margin-top: 5%;
+        font-size: 1.7rem;
+        line-height: 25px;
+    }
+}
+
+.aboutImage { 
+    width: 25%;
+}
+.whatBox,
+.whoBox {
+    width: calc(75% / 2);
+    padding-top: 1%;
+}
+
+.whatBox {
+    margin: 0 3%;
+}
+
+.aboutImage img {
+    border-radius: 50%;
+}
+
+h3 {
+    font-family: $mainFont;
+    font-size: 5rem;
+}
+
+h4 {
+    font-family: $mainFont;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    color: #DED2C2;
+}
+
