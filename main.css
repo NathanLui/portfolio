@@ -489,7 +489,15 @@ h1 {
 
 @media (max-width: 670px) {
   .quote p {
-    font-size: 1.3rem; } }
+    font-size: 1.3rem; }
+  .quote:before {
+    height: 140%; } }
+
+@media (max-width: 570px) {
+  .headerText h2 {
+    padding-left: 5%; }
+  .headerImage {
+    background-position-x: 45%; } }
 
 .about {
   background: #FDF0DF;
@@ -545,8 +553,36 @@ h4 {
   .about p {
     line-height: 27px; } }
 
+@media (max-width: 840px) {
+  .aboutBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .aboutBox h3 {
+      font-size: 3.8rem; }
+  .whatBox {
+    width: 100%; }
+  .whoBox {
+    width: 100%; }
+  .aboutImage {
+    width: 50%; }
+  .about {
+    height: 115vh;
+    padding-top: 11%; }
+  .about p {
+    margin-top: 1.5%; } }
+
+@media (max-width: 770px) {
+  .about {
+    height: 110vh; } }
+
 .projects {
-  margin-top: 12%; }
+  margin-top: 12%;
+  padding-bottom: 1%; }
 
 .projects h2 {
   font-size: 5rem; }
@@ -688,7 +724,9 @@ button:active {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 80%; }
+  width: 80%;
+  -ms-flex-preferred-size: 80%;
+  flex-basis: 80%; }
   .skillsBox li {
     font-family: "Montserrat", sans-serif;
     font-size: 2.5rem;
@@ -726,6 +764,39 @@ button:active {
   -ms-flex-align: space-between;
   align-items: space-between;
   width: 120px; }
+
+@media (max-width: 1020px) {
+  .skillsBox i {
+    font-size: 10rem;
+    width: initial; }
+  .iconBox {
+    width: 100px; }
+    .iconBox p {
+      font-size: 2rem; } }
+
+@media (max-width: 800px) {
+  .skillsBox {
+    -ms-flex-preferred-size: 90%;
+    flex-basis: 90%;
+    width: 90%; }
+    .skillsBox i {
+      font-size: 8rem; }
+  .iconBox {
+    width: 80px; }
+  .skilRow {
+    width: 50%; }
+  .skills {
+    height: 50vh; }
+    .skills h2 {
+      font-size: 4rem; } }
+
+@media (max-width: 660px) {
+  .skillsBox i {
+    font-size: 6rem; }
+  .iconBox {
+    width: 60px; }
+    .iconBox p {
+      font-size: 1.5rem; } }
 
 .contactTitle {
   position: relative;

@@ -338,7 +338,24 @@ h1 {
 }
 
 @media (max-width: 670px) {
-    .quote p {
+    .quote {
+        p {
         font-size: 1.3rem;
+        }
+        &:before {
+            height: 140%;
+        }
+
     }
+}
+
+@media (max-width: 570px) {
+    .headerText h2 {
+        padding-left: 5%;
+    }
+
+    .headerImage {
+        background-position-x: 45%;
+    }
+
 }

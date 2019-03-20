@@ -44,6 +44,7 @@
     flex-wrap: wrap;
     margin: 0 auto;
     width: 80%;
+    flex-basis: 80%;
 
     li {
         font-family: $secondaryFont;
@@ -81,3 +82,59 @@
 // .skills p {
 //     opacity: 0;
 // }
+@media (max-width: 1020px) {
+    .skillsBox i {
+        font-size: 10rem;
+        width: initial;
+    }
+
+    .iconBox {
+        width: 100px;
+
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .skillsBox {
+            flex-basis: 90%;
+            width: 90%;
+            i {
+            font-size: 8rem;
+        }
+
+    }
+
+    .iconBox {
+        width: 80px;
+    }
+
+    .skilRow {
+        width: 50%;
+    }
+
+    .skills {
+        height: 50vh;
+
+        h2 {
+            font-size: 4rem;
+        }
+    }
+    
+}
+
+@media (max-width: 660px) {
+    .skillsBox i {
+        font-size: 6rem;
+    }
+
+    .iconBox {
+        width: 60px;
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
