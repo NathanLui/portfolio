@@ -2,12 +2,13 @@ nav {
     background: white;
     position: relative;
     z-index: 10;
+    height: 8vh;
   
   &:after {
     background: inherit;
     content: '';
     display: block;
-    height: 100%;
+    height: 200%;
     left: 0;
     position: absolute;
     right: 0;
@@ -18,12 +19,12 @@ nav {
   }
 }
 
+#navBar {
+    transition: top 0.5s;
+}
+
 header {
-    height: 90vh;
-    // background: rgba(185, 46, 18, 0.856);
    background-image: linear-gradient(to right bottom, #eb8f8f, #e38383, #db7777, #d26b6b, #ca5f5f, #c35554, #bc4a49, #b5403e, #ae3532, #a62925, #9e1c18, #960a0a);
-   -webkit-filter: grayscale(5%);
-    filter: grayscale(5%); 
 }
 
 
@@ -39,7 +40,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 0;
-    width: 40%;
+    flex-basis: 40%;
         
     li {
         padding-top: 5%;
@@ -106,7 +107,7 @@ h1 {
     position: absolute;
     right: 0;
     z-index: -10;
-    bottom: 40px;
+    bottom: 0;
     transform: skewY(-3.0deg);
     transform-origin: 100%;
   }
@@ -150,12 +151,11 @@ h1 {
 }
 
 .logo {
-    width: 30%;
     padding-top: 1%;
 }
 .logo p{
     font-family: $mainFont;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .logo ul li {
@@ -173,4 +173,172 @@ h1 {
 
 .emoji img {
     margin-right: 20%;
+}
+
+
+.link {
+  position: relative;
+  cursor: pointer;
+  height: 60px;
+  padding: 1%;
+}
+
+.link:before, 
+.link:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 57%;
+  margin-top: -0.5px;
+  background: #B92D12;
+}
+
+.link:before {
+  left: -2.5px;
+}
+.link:after {
+  right: 2.5px;
+  background: #B92D12;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.link:hover:before {
+  background: #B92D12;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.link:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+@media (max-width: 1305px) {
+        .link:before, 
+        .link:after {
+            top: 50%;
+    }
+
+    .headerImage {
+        min-width: 45%;
+    }
+
+    .headerText h1 {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    .headerText h1 {
+        font-size: 7rem;
+        line-height: 75px;
+    }
+
+    .headerText h2 {
+        font-size: 4rem;
+        padding-left: 20%;
+    }
+}
+
+@media (max-width: 1135px) {
+    .quoteText {
+        font-size: 2rem;
+    }
+
+    .headerText {
+        width: 90%;
+    }
+
+    .headerText h1{
+        font-size: 6rem;
+        line-height: 65px;
+    }
+
+    .headerText h2 {
+        font-size: 3.5rem;
+    }
+
+    .link:before, 
+        .link:after {
+            top: 47%;
+    }
+
+     .headerImage {
+        background-position-x: 30%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .headerImage {
+        background-position-x: 40%;
+    }
+
+    .headerText h1 {
+        font-size: 5rem;
+        line-height: 55px;
+    }
+
+    .headerText h2 {
+        font-size: 3rem;
+    }
+
+    .quote {
+
+        p {
+            font-size: 1.7rem;
+        }
+        &:after {
+            height: 220%;
+        }
+    }
+
+    .logo ul li {
+        font-size: 1.1rem;
+    }
+
+    .logo span {
+        padding-top: 20%;
+    }
+}
+
+@media (max-width: 840px) {
+
+    .nav li {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .quote p {
+        font-size: 1.5rem;
+    }
+
+    .headerText h1 {
+        font-size: 4.5rem;
+    }
+
+    .headerText h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-height: 760px) {
+    .logo {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 50%;
+    }
+
+    .logo ul {
+        margin-left: 3%;
+        padding-top: 1%;
+    }
+}
+
+@media (max-width: 670px) {
+    .quote p {
+        font-size: 1.3rem;
+    }
 }

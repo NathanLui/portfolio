@@ -1,26 +1,21 @@
 .footer {
     height: 15vh;
-    background: grey;
+    background: #353535;
     padding-top: 5%;
     z-index: -105;
-    position: absolute;
+    position: relative;
     width: 100%;
 }
 
 .footer p {
     font-family: $secondaryFont;
     color: $textColor;
-    font-size: 2rem;
-}
-.footer i {
-    color: $textColor;
-    font-size: 3rem;
-    margin: 0 5px;
+    font-size: 1.7rem;
 }
 
 .footerBox {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .iconList {

@@ -16,7 +16,7 @@
 </head>
 <body>
     <header id="home">
-        <div class="sticky">
+        <div class="sticky" id="navBar">
             <nav>
                 <div class="wrapper nav">
                     <div class="logo">
@@ -28,11 +28,11 @@
                         </ul>
                     </div>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="link"><a href="#home">Home</a></li>
+                        <li class="link"><a href="#about">About</a></li>
+                        <li class="link"><a href="#projects">Projects</a></li>
+                        <li class="link"><a href="#skills">Skills</a></li>
+                        <li class="link"><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -61,12 +61,12 @@
             <div class="whatBox">
                 <h3>What.</h3>
                 <h4>Am I all about</h4>
-                <p>Hi, I'm Nathan, a front-end developer currently based in Toronto. I specialize in creating user-friendly, responsive, accessible websites using current industry-standard practices. If I'm not busy coding, you might find me improving my fitness levels at the gym, bouldering or exploring nature.</p>
+                <p>Hi, I'm Nathan, a front-end developer based in Toronto. I specialize in creating user-friendly, responsive, accessible websites using best industry-standard practices. When I'm not busy coding, you might find me improving my fitness levels at the gym, hiking in the wild or catching the latest NBA game.</p>
             </div>
             <div class="whoBox">
                 <h3>Why.</h3>
                 <h4>I aspire to be</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi ratione at odio fugit omnis dicta. Unde deserunt debitis ex alias voluptatum quidem! Nihil voluptatem amet modi, impedit necessitatibus ipsum assumenda?</p>
+                <p>My devotion to web-development stems from my passion for problem solving, puzzles and video games. I am always looking to improve my craft and enjoy tackling complex endeavors, while using code to bring digital designs to life.</p>
             </div>
         </div>
     </section>  
@@ -77,7 +77,7 @@
         <h2>Skill Stack.</h2>
         <h3>I come pre-installed with</h3>
             <ul class="skillsBox">
-                <div class="skillRow">
+                <div class="skillRow" data-aos="fade-left" data-aos-delay="300">
                     <li class="iconBox">
                         <i class="devicon-html5-plain"></i><p>HTML5</p>
                     </li>
@@ -95,7 +95,7 @@
                         <p>Jquery</p>
                     </li>
                 </div>
-                <div class="skillRow">
+                <div class="skillRow" data-aos="fade-right" data-aos-delay="300">
                     <li class="iconBox">
                         <i class="devicon-git-plain"></i><p>Git</p>
                     </li>
@@ -115,23 +115,22 @@
                 </div>
             </ul>
         </div>
-
-
     </section>
 
-
     <section class="projects wrapper" id="projects">
-        <h2>Recent Work.</h2>
-        
+        <div class="projectsTitle">
+            <h2>Recent Work.</h2>
+            <h3>Things I've built</h3>
+        </div>
         <div class="projectBox">
-            <div class="projectImg" data-aos="fade-right">
+            <div class="projectImg" data-aos="fade-right" data-aos-delay="200">
                 <img src="assets/barOneImg.png" alt="">
             </div>
-            <div class="projectInfo" data-aos="fade-up-left" data-aos-delay="100">
+            <div class="projectInfo" data-aos="fade-up-left" data-aos-delay="400">
                 <h3>Bar-One PSD</h3>
                 <p>Bar-One is a multi-page, pixel perfect PSD conversion. It utilizes flex-box to maintain responsiveness across all devices from mobile to desktop.</p>
-                <button>Live</button>
-                <button>Github</button>
+                <a href="https://nathanlui.github.io/nathan-lui-project2/"><button>Live</button></a>
+                <a href="https://github.com/NathanLui/nathan-lui-project2"><button>Github</button></a>
                 <ul>
                     <li>HTML</li>
                     <li>SCSS</li>
@@ -141,20 +140,20 @@
         </div>
         
         <div class="projectBox">
-            <div class="projectImg" data-aos="fade-right">
-                <img src="assets/boffoImg.png" alt="">
-            </div>
-            <div class="projectInfo" data-aos="fade-up-left" data-aos-delay="100">
+            <div class="projectInfo projectBoxAlt" data-aos="fade-up-right" data-aos-delay="400">
                 <h3>Box Office Boffo</h3>
                 <p>A collaborative React App following a mock client brief. Create a list and try to predict this summer's Box Office Hits! Lists are saved to firebase so users can compare their predictions.</p>
-                <button>Live</button>
-                <button>Github</button>
+                <a href="https://auth-test-d2fa2.firebaseapp.com/"><button>Live</button></a>
+                <a href="https://github.com/demonagency/BoxOfficeBoffo"><button>Github</button></a>
                 <ul>
                     <li>React</li>
                     <li>Firebase</li>
                     <li>API</li>
                     <li>Github Collab</li>
                 </ul>
+            </div>
+            <div class="projectImg" data-aos="fade-left" data-aos-delay="200">
+                <img src="assets/boffoImg.png" alt="">
             </div>
         </div>
 
@@ -177,14 +176,14 @@
         </div> -->
             
         <div class="projectBox">
-            <div class="projectImg" data-aos="fade-right">
+            <div class="projectImg" data-aos="fade-right" data-aos-delay="200">
                 <img src="assets/smashBrosImg.png" alt="">
             </div>
-            <div class="projectInfo" data-aos="fade-up-left" data-aos-delay="100">
+            <div class="projectInfo" data-aos="fade-up-left" data-aos-delay="400">
                 <h3>Smash Bros Character Select</h3>
                 <p>A fun quiz that helps users pick a character from the game, Super Smash Brothers Ultimate. Select characteristics and find the best fighter for you!</p>
-                <button>Live</button>
-                <button>Github</button>
+                <a href="https://nathanlui.github.io/nathan-lui-project3/"><button>Live</button></a>
+                <a href="https://github.com/NathanLui/nathan-lui-project3"><button>Github</button></a> 
                 <ul>
                     <li>HTML</li>
                     <li>SCSS</li>
@@ -198,25 +197,41 @@
         <div class="contactTitle" id="contact">
             <div class="wrapper">
                 <h2>Contact Me.</h2>
-                <h3>Have A question? Lets Talk.</h3>
+                <h3>Have a question? Let's talk.</h3>
             </div>
         </div>
         <div class="contactForm">
             <div class="wrapper">
-                <h3>Contact Form</h3>
-                <div class="formFlexbox">
-                    <div class="contactInfo">
-                        <form action="">
-                            <label for="name" class="visuallyHidden"></label>
-                            <input type="text" id="name" name="name" placeholder="Name">
-                            <label for="email" class="visuallyHidden"></label>
-                            <input type="email" id="email" name="email" placeholder="Email address">
-                        </div>
-                        <label for="message" class="visuallyHidden"></label>
-                        <textarea name="message" id="" cols="46" rows="4" placeholder="Message"></textarea>
-                        <button>Send A Message</button>
+                <h3 data-aos="fade-right" >Let's work together.</h3>
+                <div class="formFlexBoxBox"">
+                    <div class="formFlexbox" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contactInfo">
+                            <form action="">
+                                <label for="name" class="visuallyHidden"></label>
+                                <input type="text" id="name" name="name" placeholder="Name">
+                                <label for="email" class="visuallyHidden"></label>
+                                <input type="email" id="email" name="email" placeholder="Email address">
+                            </div>
+                            <label for="message" class="visuallyHidden"></label>
+                            <textarea name="message" id="" cols="46" rows="4" placeholder="Message"></textarea>
+                            <button>Send A Message</button>
+                        </form>
                     </div>
-                </form>
+                    <div class="contactText" data-aos="fade-left" data-aos-delay="400">
+                        <p >Want to chat? You can reach me at <a href="#">nathanlui429@gmail.com</a> or fill out the form and I'll get back to you as soon as I can!</p>
+                        <ul class="iconList">
+                            <a href="https://twitter.com/NathanAndrewLui">
+                                <li><i class="fab fa-twitter-square"></i></li>
+                            </a>
+                            <a href="https://www.linkedin.com/in/nathan-lui-bb4360165/">
+                                <li><i class="fab fa-linkedin"></i></li>
+                            </a>
+                            <a href="https://github.com/NathanLui">
+                                <li><i class="fab fa-github-square"></i></li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -224,22 +239,10 @@
 
     <footer >
         <div class="footer" id="footer">
-            <div class="wrapper footerBox">
-                <p>&copy; Nathan Lui 2019</p>
-                <ul class="iconList">
-                    <a href="">
-                        <li><i class="fab fa-twitter-square"></i></li>
-                    </a>
-                    <a href="">
-                        <li><i class="fab fa-linkedin"></i></li>
-                    </a>
-                    <a href="">
-                        <li><i class="fab fa-github-square"></i></li>
-                    </a>
-                    <a href="">
-                        <li></li>
-                    </a>
-                </ul>
+            <div class="wrapper">
+                <div class="footerBox">
+                    <p>Built by Nathan Lui &copy; 2019</p>
+                </div>
             </div>
         </div>
     </footer>
@@ -253,6 +256,17 @@
                 easing: 'swing',
                 speed: 1500
             })
+
+        // var prevScrollpos = window.pageYOffset;
+        //     window.onscroll = function () {
+        //         var currentScrollPos = window.pageYOffset;
+        //         if (prevScrollpos > currentScrollPos) {
+        //             document.getElementById("navBar").style.top = "-200px";
+        //         } else {
+        //             document.getElementById("navBar").style.top = "0";
+        //         }
+        //         prevScrollpos = currentScrollPos;
+        //     }
     </script>   
     
 </body>

@@ -8,15 +8,20 @@
 
 .projects h3 {
     font-size: 2.7rem;
-    font-family: $secondaryFont;
+    font-family: $mainFont;
     letter-spacing: 1px;
     margin-bottom: 5%;
+}
+
+.projectsTitle h3 {
+    color: #d4d2d0;
+    font-size: 3rem;
+    font-weight: 300;
 }
 
 .projectBox {
     display: flex;
     margin: 5% 0;
-    
 }
 
 .projects p {
@@ -30,10 +35,15 @@
 
 .projectInfo {
     width: 50%;
-    padding: 2%;
+    padding: 2% 4%;
     background: whitesmoke;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     margin-left: 2%;
+}
+
+.projectBoxAlt {
+    margin: 0;
+    margin-right: 2%;
 }
 
 .projects ul {

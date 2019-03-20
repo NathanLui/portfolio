@@ -1,14 +1,14 @@
 .contactTitle {
     position: relative;
     z-index: 10;
-    background: #F9F9F9;
+    background: #FDF0DF;
     // height: 20vh;
     &:before,
     &:after{
     background: inherit;
     content: '';
     display: block;
-    height: 80%;
+    height: 90%;
     left: 0;
     position: absolute;
     right: 0;
@@ -21,7 +21,7 @@
    &:before {
     bottom: 80px;
     transform: skewY(-3.0deg);
-    height: 100%;
+    height: 120%;
     transform-origin: 100% 0;
   }
 }
@@ -35,25 +35,32 @@
 }
 
 .contactTitle h3 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
+    color: #DED2C2;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 .contact textarea {
     width: 400px;
 }
 
-.contact {
+.contactInfo {
     width: 100%;
 }
 
 .contactInfo input {
-    width: 477px;
+    width: 100%;
     background: #262626;
+    color: $textColor;
     border: none;
     border-bottom: 2px solid $accentColor;
     height: 70px;
 }
 
+form {
+    width: 100%;
+}
 
 .contactForm {
     background: #262626;
@@ -69,7 +76,6 @@
         padding-left: 1%;
         color: $textColor;
         font-size: 4rem;
-        resize: none;
         width: 100%;
     }
 
@@ -97,10 +103,9 @@
   }
 }
 
-
 ::placeholder {
     font-size: 2rem;
-    color: $textColor;
+    color: grey;
 }
 
 .formFlexbox {
@@ -108,6 +113,48 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    flex-basis: 50%;
+}
+.contactText {
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 40%;
+}
+
+.contactForm p {
+    color: $textColor;
+    font-size: 2rem;
+    line-height: 1.6;
+
+    a {
+        color:#ff5a3a;
+    }
+}
+
+.contactFormBox {
+    margin: 0 auto;
+}
+
+.formFlexBoxBox {
+    display: flex;
+    align-items: space-between;
+}
+
+.iconList {
+    margin-top: 4%;
+}
+
+.iconList i {
+    color: grey;
+    font-size: 4rem;
+    margin: 0 5px;
+    
+}
+
+.iconList i:hover {
+    color: #B92D12;
+    transition-delay:0.05s;
 }
 
