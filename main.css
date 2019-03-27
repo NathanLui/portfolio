@@ -180,6 +180,14 @@ h2 {
   max-width: 90%;
   margin: 0 auto; }
 
+@media (max-width: 600px) {
+  html {
+    font-size: 60%; } }
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%; } }
+
 nav {
   background: white;
   position: relative;
@@ -240,6 +248,52 @@ header {
 a {
   text-decoration: none;
   color: inherit; }
+
+.menuToggle {
+  position: absolute;
+  padding: 0.8em;
+  top: 1em;
+  right: .1em;
+  cursor: pointer; }
+
+#navList.opening {
+  display: block;
+  height: 30px; }
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: '';
+  display: block;
+  background: #B92D12;
+  height: 3px;
+  width: 2em;
+  border-radius: 3px;
+  margin-left: 10%;
+  -webkit-transition: all ease-in-out 350ms;
+  -o-transition: all ease-in-out 350ms;
+  transition: all ease-in-out 350ms; }
+
+.hamburger::before {
+  -webkit-transform: translateY(-7px);
+  -ms-transform: translateY(-7px);
+  transform: translateY(-7px); }
+
+.hamburger::after {
+  -webkit-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  transform: translateY(4px); }
+
+.open .hamburger {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.open .hamburger::before {
+  display: none; }
+
+.open .hamburger::after {
+  -webkit-transform: translateY(-1px) rotate(-90deg);
+  -ms-transform: translateY(-1px) rotate(-90deg);
+  transform: translateY(-1px) rotate(-90deg); }
 
 h1 {
   font-size: 8.5rem;
@@ -319,7 +373,7 @@ h1 {
 
 .quote {
   font-family: "Montserrat", sans-serif;
-  height: 6vh; }
+  height: 8vh; }
 
 .quoteText {
   font-size: 2.3rem; }
@@ -454,15 +508,11 @@ h1 {
   .quote p {
     font-size: 1.7rem; }
   .quote:after {
-    height: 220%; }
+    height: 240%; }
   .logo ul li {
     font-size: 1.1rem; }
   .logo span {
     padding-top: 20%; } }
-
-@media (max-width: 840px) {
-  .nav li {
-    font-size: 1.5rem; } }
 
 @media (max-width: 780px) {
   .quote p {
@@ -470,7 +520,32 @@ h1 {
   .headerText h1 {
     font-size: 4.5rem; }
   .headerText h2 {
-    font-size: 2.5rem; } }
+    font-size: 2.5rem; }
+  .quoteAuthor {
+    line-height: 15px; }
+  #navList {
+    display: none; }
+  .nav ul li {
+    padding: 0; }
+  .navList {
+    margin-right: 5%; }
+  .navList a {
+    color: black;
+    background: #fff;
+    display: block;
+    padding: 1.5em 4em 1.5em 3em;
+    text-transform: uppercase;
+    text-decoration: none; }
+  .navList a:hover,
+  .navList a:focus {
+    background: #B92D12; }
+  .link:before,
+  .link:after {
+    content: none; } }
+
+@media (min-width: 781px) {
+  .menuToggle {
+    display: none; } }
 
 @media (max-height: 760px) {
   .logo {
@@ -487,11 +562,11 @@ h1 {
     margin-left: 3%;
     padding-top: 1%; } }
 
-@media (max-width: 670px) {
-  .quote p {
-    font-size: 1.3rem; }
+@media (max-width: 673px) {
   .quote:before {
-    height: 140%; } }
+    height: 140%; }
+  .headerText h1 {
+    line-height: 45px; } }
 
 @media (max-width: 570px) {
   .headerText h2 {
@@ -499,25 +574,48 @@ h1 {
   .headerImage {
     background-position-x: 45%; } }
 
+@media (max-width: 500px) {
+  .quote {
+    height: 8vh; }
+    .quote:before {
+      top: 30px; } }
+
+@media (max-width: 450px) {
+  .headerText h1 {
+    width: 90%;
+    font-size: 3.5rem;
+    line-height: 30px; }
+  .headerText h2 {
+    font-size: 2rem; }
+  .quote {
+    height: 6vh; } }
+
+@media (max-width: 400px) {
+  .logoList {
+    font-size: 1rem; } }
+
 .about {
   background: #FDF0DF;
-  height: 70vh;
-  padding-top: 9%; }
+  padding-top: 9%;
+  padding-bottom: 10%; }
 
 .aboutBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly; }
   .aboutBox p {
     margin-top: 5%;
-    font-size: 1.8rem;
-    line-height: 30px; }
+    font-size: 2.2rem;
+    line-height: 35px; }
 
 .aboutImage {
-  width: 25%; }
+  width: 25%;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center; }
 
 .whatBox,
 .whoBox {
@@ -539,19 +637,19 @@ h4 {
   font-size: 2.8rem;
   font-weight: 300;
   letter-spacing: 1px;
-  color: #DED2C2; }
+  color: #B92D12;
+  padding-left: 1%; }
 
 @media (max-width: 1250px) {
   .about h3 {
     font-size: 4.5rem; }
   .about h4 {
-    font-size: 2.6rem; }
-  .about p {
-    font-size: 1.6rem; } }
+    font-size: 2.6rem; } }
 
 @media (max-width: 980px) {
   .about p {
-    line-height: 27px; } }
+    line-height: 27px;
+    font-size: 1.6rem; } }
 
 @media (max-width: 840px) {
   .aboutBox {
@@ -569,19 +667,26 @@ h4 {
   .whoBox {
     width: 100%; }
   .aboutImage {
-    width: 50%; }
+    width: 40%; }
   .about {
-    height: 115vh;
+    padding-bottom: 20%;
     padding-top: 11%; }
   .about p {
     margin-top: 1.5%; } }
 
-@media (max-width: 770px) {
+@media (max-width: 500px) {
   .about {
-    height: 110vh; } }
+    padding-top: 20%; }
+  .about p {
+    line-height: 25px; } }
+
+@media (max-width: 375px) {
+  .projectInfo button {
+    width: 100%;
+    margin-bottom: 2.5%; } }
 
 .projects {
-  margin-top: 12%;
+  padding-top: 12%;
   padding-bottom: 1%; }
 
 .projects h2 {
@@ -594,7 +699,8 @@ h4 {
   margin-bottom: 5%; }
 
 .projectsTitle h3 {
-  color: #d4d2d0;
+  color: black;
+  font-style: italic;
   font-size: 3rem;
   font-weight: 300; }
 
@@ -605,7 +711,7 @@ h4 {
   margin: 5% 0; }
 
 .projects p {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: 4%;
   line-height: 30px; }
 
@@ -620,7 +726,7 @@ h4 {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   margin-left: 2%; }
 
-.projectBoxAlt {
+.projectInfoAlt {
   margin: 0;
   margin-right: 2%; }
 
@@ -654,8 +760,8 @@ button {
   cursor: pointer;
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
-  font-size: 17px;
-  padding: 7px 40px;
+  font-size: 1.7rem;
+  padding: 7px 45px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #810e05;
   margin-right: 1%; }
@@ -675,11 +781,50 @@ button:active {
   position: relative;
   top: 1px; }
 
+@media (max-width: 960px) {
+  .projectBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .projectImg {
+    width: 80%; }
+  .projectBoxAlt {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+  .projectInfo {
+    width: 90%;
+    margin-top: 4%; }
+  .projects h3 {
+    margin-bottom: 1%; }
+  .projectBox ul {
+    margin-top: 4%; }
+  .projects p {
+    font-size: 1.6rem;
+    margin-bottom: 2%; }
+  .projects {
+    padding-bottom: 6%; }
+  .projects li {
+    font-size: 1.6rem; } }
+
+@media (max-width: 800px) {
+  .projects h2 {
+    font-size: 4rem; } }
+
+@media (max-width: 690px) {
+  .projects p {
+    line-height: 25px; } }
+
 .skills {
   position: relative;
   z-index: 10;
   background: #969494;
-  height: 60vh; }
+  padding-top: 2%; }
   .skills:before, .skills:after {
     background: inherit;
     content: '';
@@ -707,15 +852,14 @@ button:active {
     transform-origin: 100% 0; }
 
 .skills h2 {
-  font-size: 5rem;
-  margin: 1% 0; }
+  font-size: 5rem; }
 
 .skills h3 {
   font-size: 3rem;
   font-weight: 300;
   font-family: "Abril Fatface", cursive;
-  color: #d4d2d0;
-  margin-bottom: 3%; }
+  color: black;
+  font-style: italic; }
 
 .skillsBox {
   display: -webkit-box;
@@ -785,10 +929,8 @@ button:active {
     width: 80px; }
   .skilRow {
     width: 50%; }
-  .skills {
-    height: 50vh; }
-    .skills h2 {
-      font-size: 4rem; } }
+  .skills h2 {
+    font-size: 4rem; } }
 
 @media (max-width: 660px) {
   .skillsBox i {
@@ -797,6 +939,28 @@ button:active {
     width: 60px; }
     .iconBox p {
       font-size: 1.5rem; } }
+
+@media (max-width: 500px) {
+  .skillRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 4%; }
+  .skillsBox {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 60%; }
+  .skills {
+    margin-bottom: 20%; }
+    .skills:after {
+      height: 115%; } }
 
 .contactTitle {
   position: relative;
@@ -831,12 +995,15 @@ button:active {
 .contact {
   margin-top: 8%; }
 
+.contactTitle {
+  padding-top: 2%; }
+
 .contactTitle h2 {
   font-size: 5rem; }
 
 .contactTitle h3 {
   font-size: 2.7rem;
-  color: #DED2C2;
+  color: #B92D12;
   font-weight: 300;
   letter-spacing: 1px; }
 
@@ -852,14 +1019,13 @@ button:active {
   color: whitesmoke;
   border: none;
   border-bottom: 2px solid #B92D12;
-  height: 70px; }
+  height: 50px; }
 
 form {
   width: 100%; }
 
 .contactForm {
   background: #262626;
-  height: 60vh;
   padding-top: 6%; }
   .contactForm textarea {
     border: 2px solid #B92D12;
@@ -869,7 +1035,7 @@ form {
     padding-top: 2%;
     padding-left: 1%;
     color: whitesmoke;
-    font-size: 4rem;
+    font-size: 2rem;
     width: 100%; }
   .contactForm h3 {
     color: whitesmoke;
@@ -947,7 +1113,7 @@ form {
   font-size: 2rem;
   line-height: 1.6; }
   .contactForm p a {
-    color: #ff5a3a; }
+    color: #B92D12; }
 
 .contactFormBox {
   margin: 0 auto; }
@@ -974,8 +1140,37 @@ form {
   -o-transition-delay: 0.05s;
   transition-delay: 0.05s; }
 
+@media (max-width: 1044px) {
+  .contactText {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%; } }
+
+@media (max-width: 1000px) {
+  .contactTitle:before {
+    height: 90%; } }
+
+@media (max-width: 800px) {
+  .contact h2 {
+    font-size: 4rem; }
+  .contactForm h3 {
+    font-size: 3rem; }
+  .contactForm p {
+    font-size: 1.6rem; }
+  .contactTitle:before {
+    height: 80%; } }
+
+@media (max-width: 660px) {
+  .formFlexBoxBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .contactForm p {
+    margin-top: 3%; }
+  .contactTitle:before {
+    bottom: 60px; } }
+
 .footer {
-  height: 15vh;
   background: #353535;
   padding-top: 5%;
   z-index: -105;
@@ -985,7 +1180,8 @@ form {
 .footer p {
   font-family: "Montserrat", sans-serif;
   color: whitesmoke;
-  font-size: 1.7rem; }
+  font-size: 1.7rem;
+  padding-bottom: 5px; }
 
 .footerBox {
   display: -webkit-box;

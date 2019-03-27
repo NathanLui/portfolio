@@ -2,7 +2,7 @@
     position: relative;
     z-index: 10;
     background: #969494;
-    height: 60vh;
+    padding-top: 2%;
     &:before,
     &:after{
     background: inherit;
@@ -28,15 +28,14 @@
 
 .skills h2 {
     font-size: 5rem;
-    margin: 1% 0;
 }
 
 .skills h3 {
     font-size: 3rem;
     font-weight: 300;
     font-family: $mainFont;
-    color: #d4d2d0;
-    margin-bottom: 3%;
+    color: black;
+    font-style: italic;
 }
 
 .skillsBox {
@@ -115,14 +114,9 @@
         width: 50%;
     }
 
-    .skills {
-        height: 50vh;
-
-        h2 {
+    .skills h2 {
             font-size: 4rem;
-        }
     }
-    
 }
 
 @media (max-width: 660px) {
@@ -135,6 +129,27 @@
 
         p {
             font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .skillRow {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4%;
+    }
+
+    .skillsBox {
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 60%;
+    }
+
+    .skills {
+        margin-bottom: 20%;
+            &:after{
+            height: 115%;
         }
     }
 }

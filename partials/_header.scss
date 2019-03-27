@@ -52,6 +52,56 @@ a {
     color: inherit;
 }
 
+// HAMBURGER //
+
+.menuToggle {
+  position: absolute;
+  padding: 0.8em;
+  top: 1em;
+  right: .1em;
+  cursor: pointer;
+}
+
+#navList.opening {
+  display: block;
+  height: 30px;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: '';
+  display: block;
+  background: $accentColor;
+  height: 3px;
+  width: 2em;
+  border-radius: 3px;
+  margin-left: 10%;
+  -webkit-transition: all ease-in-out 350ms;
+  transition: all ease-in-out 350ms;
+}
+
+.hamburger::before {
+  -webkit-transform: translateY(-7px);
+  transform: translateY(-7px);
+}
+
+.hamburger::after {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+}
+
+.open .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before { display: none; }
+
+.open .hamburger::after {
+  -webkit-transform: translateY(-1px) rotate(-90deg);
+  transform: translateY(-1px) rotate(-90deg);
+}
+
+
 h1 {
     font-size: 8.5rem;
     font-weight: 400;
@@ -122,7 +172,7 @@ h1 {
 
 .quote {
     font-family: $secondaryFont;
-    height: 6vh;
+    height: 8vh;
 }
 
 .quoteText {
@@ -290,7 +340,7 @@ h1 {
             font-size: 1.7rem;
         }
         &:after {
-            height: 220%;
+            height: 240%;
         }
     }
 
@@ -300,13 +350,6 @@ h1 {
 
     .logo span {
         padding-top: 20%;
-    }
-}
-
-@media (max-width: 840px) {
-
-    .nav li {
-        font-size: 1.5rem;
     }
 }
 
@@ -322,7 +365,52 @@ h1 {
     .headerText h2 {
         font-size: 2.5rem;
     }
+
+    .quoteAuthor {
+        line-height: 15px;
+    }
+    #navList {
+        display: none;
+    }
+
+    .nav ul li {
+        padding: 0;
+    }
+
+    .navList {
+        margin-right: 5%;
+    }
+
+    .navList a {
+        color: black;
+        // background: rgba(185,45,18, 0.8);
+        background: #fff;
+        display: block;
+        padding: 1.5em 4em 1.5em 3em;
+        text-transform: uppercase;
+        text-decoration: none;
 }
+    .navList a:hover,
+    .navList a:focus { 
+        // background: rgba(253,240,223, 0.8);
+        background: $accentColor; 
+}
+    .link:before, 
+    .link:after {
+        content: none;
+}
+
+}
+
+@media (min-width: 781px) {
+
+.menuToggle { 
+    display: none; 
+}
+
+}
+ 
+
 
 @media (max-height: 760px) {
     .logo {
@@ -337,16 +425,18 @@ h1 {
     }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 673px) {
     .quote {
-        p {
-        font-size: 1.3rem;
-        }
+       
         &:before {
             height: 140%;
         }
-
     }
+
+    .headerText h1 {
+        line-height: 45px;
+    }
+
 }
 
 @media (max-width: 570px) {
@@ -358,4 +448,36 @@ h1 {
         background-position-x: 45%;
     }
 
+}
+
+@media (max-width:500px) {
+    .quote {
+        height: 8vh;
+
+        &:before {
+        top: 30px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .headerText h1 {
+        width: 90%;
+        font-size: 3.5rem;
+        line-height: 30px;
+    }
+
+    .headerText h2 {
+        font-size: 2rem;
+    }
+
+    .quote {
+        height: 6vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .logoList {
+        font-size: 1rem;
+    }
 }

@@ -27,7 +27,10 @@
                             <li class="emoji"><img src="assets/dogEmoji.png" alt=""><span>Lover</span></li>
                         </ul>
                     </div>
-                    <ul>
+                    <div class="menuToggle">
+                        <div class="hamburger"></div>
+                    </div>
+                    <ul class="navList open" id="navList">
                         <li class="link"><a href="#home">Home</a></li>
                         <li class="link"><a href="#about">About</a></li>
                         <li class="link"><a href="#projects">Projects</a></li>
@@ -69,10 +72,11 @@
                 <p>My passion for web-development stems from my love for puzzles, problem solving and video games. I am always looking to improve my craft and enjoy tackling complex endeavors while using code to bring digital designs to life.</p>
             </div>
         </div>
+        <div id="skills"></div>
     </section>  
 
 
-    <section class="skills" id="skills">
+    <section class="skills">
         <div class="wrapper">
         <h2>Skill Stack.</h2>
         <h3>I come pre-installed with</h3>
@@ -97,7 +101,8 @@
                 </div>
                 <div class="skillRow" data-aos="fade-right" data-aos-delay="150">
                     <li class="iconBox">
-                        <i class="devicon-git-plain"></i><p>Git</p>
+                        <i class="devicon-react-original"></i>
+                        <p>React</p>
                     </li>
                     <li class="iconBox">
                         <i class="devicon-github-plain"></i><p>GitHub</p>
@@ -106,7 +111,7 @@
                         <img src="assets/firebase.svg" alt="firebase"><p>Firebase</p>
                     </li>
                     <li class="iconBox">
-                        <i class="devicon-react-original"></i><p>React</p>
+                        <i class="devicon-visualstudio-plain"></i><p>VSCode</p>
                     </li>
                     <li class="iconBox responseIcon">
                         <i class="icon-mobile-device"></i>
@@ -134,13 +139,13 @@
                 <ul>
                     <li>HTML</li>
                     <li>SCSS</li>
-                    <li>Responsive Design</li>
+                    <li>Responsive</li>
                 </ul>
             </div>
         </div>
         
-        <div class="projectBox">
-            <div class="projectInfo projectBoxAlt" data-aos="fade-up-right" data-aos-delay="400">
+        <div class="projectBox projectBoxAlt">
+            <div class="projectInfo projectInfoAlt" data-aos="fade-up-right" data-aos-delay="400">
                 <h3>Box Office Boffo</h3>
                 <p>A collaborative React App following a mock client brief. Create a list and try to predict this summer's Box Office Hits! Lists are saved to firebase so users can compare their predictions.</p>
                 <a href="https://auth-test-d2fa2.firebaseapp.com/"><button>Live</button></a>
@@ -149,7 +154,7 @@
                     <li>React</li>
                     <li>Firebase</li>
                     <li>API</li>
-                    <li>Github Collab</li>
+                    <li>Github</li>
                 </ul>
             </div>
             <div class="projectImg" data-aos="fade-left" data-aos-delay="200">
@@ -163,9 +168,9 @@
             </div>
             <div class="projectInfo">
                 <h3>RAM - Memory Game</h3>
-                <p>An interactive app where users are challenged to test their memory one tech buzz-word at a time. Can you get the high score?
+                <p>An interactive app where users are challenged to test their memory one tech word at a time. Can you get the high score?
                 </p>
-                <button>Live</button>
+                <a href="https://project-five-cb8d7.firebaseapp.com/"><button>Live</button></a>
                 <button>Github</button>
                 <ul>
                     <li>JSX</li>
@@ -204,7 +209,7 @@
             <div class="wrapper">
                 <h3 data-aos="fade-right" >Let's work together.</h3>
                 <div class="formFlexBoxBox"">
-                    <div class="formFlexbox" data-aos="fade-up" data-aos-delay="200">
+                    <div class="formFlexbox" data-aos="fade-right" data-aos-delay="200">
                         <div class="contactInfo">
                             <form action="">
                                 <label for="name" class="visuallyHidden"></label>
@@ -256,17 +261,15 @@
                 easing: 'swing',
                 speed: 1500
             })
-
-        // var prevScrollpos = window.pageYOffset;
-        //     window.onscroll = function () {
-        //         var currentScrollPos = window.pageYOffset;
-        //         if (prevScrollpos > currentScrollPos) {
-        //             document.getElementById("navBar").style.top = "-200px";
-        //         } else {
-        //             document.getElementById("navBar").style.top = "0";
-        //         }
-        //         prevScrollpos = currentScrollPos;
-        //     }
+        
+        $('.menuToggle').click(function () {
+                $('ul').toggleClass('opening');
+                $(this).toggleClass('open');
+            })
+        $("a").click(function () {
+                $('ul').toggleClass("opening");
+                $('.menuToggle').toggleClass('open');
+            });
     </script>   
     
 </body>

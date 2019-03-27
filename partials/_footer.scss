@@ -1,5 +1,4 @@
 .footer {
-    height: 15vh;
     background: #353535;
     padding-top: 5%;
     z-index: -105;
@@ -11,6 +10,7 @@
     font-family: $secondaryFont;
     color: $textColor;
     font-size: 1.7rem;
+    padding-bottom: 5px;
 }
 
 .footerBox {

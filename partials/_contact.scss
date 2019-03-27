@@ -30,13 +30,17 @@
     margin-top: 8%;
 }
 
+.contactTitle {
+    padding-top: 2%;
+}
+
 .contactTitle h2 {
     font-size: 5rem;
 }
 
 .contactTitle h3 {
     font-size: 2.7rem;
-    color: #DED2C2;
+    color: $accentColor;
     font-weight: 300;
     letter-spacing: 1px;
 }
@@ -55,7 +59,7 @@
     color: $textColor;
     border: none;
     border-bottom: 2px solid $accentColor;
-    height: 70px;
+    height: 50px;
 }
 
 form {
@@ -64,7 +68,6 @@ form {
 
 .contactForm {
     background: #262626;
-    height: 60vh;
     padding-top: 6%;
     
     textarea {
@@ -75,7 +78,7 @@ form {
         padding-top: 2%;
         padding-left: 1%;
         color: $textColor;
-        font-size: 4rem;
+        font-size: 2rem;
         width: 100%;
     }
 
@@ -129,7 +132,7 @@ form {
     line-height: 1.6;
 
     a {
-        color:#ff5a3a;
+        color:#B92D12;
     }
 }
 
@@ -158,3 +161,55 @@ form {
     transition-delay:0.05s;
 }
 
+@media (max-width: 1044px) {
+    .contactText {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .contactTitle {
+        
+        &:before {
+        height: 90%;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .contact h2 {
+        font-size: 4rem;
+    }
+
+    .contactForm h3 {
+        font-size: 3rem;
+    }
+
+    .contactForm p {
+        font-size: 1.6rem;
+    }
+
+    .contactTitle {
+        
+        &:before {
+        height: 80%;
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .formFlexBoxBox {
+        flex-direction: column;
+    }
+
+    .contactForm p {
+        margin-top: 3%;
+    }
+
+    .contactTitle {
+        &:before {
+            bottom: 60px;
+        
+            }
+    }
+}
