@@ -148,10 +148,16 @@ button:active {
     .projects p {
         line-height: 25px;
     }
+
+    .projectImg {
+        width: 90%;
+    }
 }
 
-@media (max-width: 400px) {
-
+@media (max-width: 500px) {
+    .projectImg {
+        width: 100%;
+    }
 }
 
         

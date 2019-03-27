@@ -818,7 +818,13 @@ button:active {
 
 @media (max-width: 690px) {
   .projects p {
-    line-height: 25px; } }
+    line-height: 25px; }
+  .projectImg {
+    width: 90%; } }
+
+@media (max-width: 500px) {
+  .projectImg {
+    width: 100%; } }
 
 .skills {
   position: relative;
