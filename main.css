@@ -584,15 +584,22 @@ h1 {
   .headerText h1 {
     width: 90%;
     font-size: 3.5rem;
-    line-height: 30px; }
+    line-height: 30px;
+    padding-left: 0; }
   .headerText h2 {
     font-size: 2rem; }
   .quote {
-    height: 6vh; } }
+    height: 6vh; }
+  .quote::after {
+    height: 186%; } }
 
 @media (max-width: 400px) {
   .logoList {
     font-size: 1rem; } }
+
+@media (max-width: 350px) {
+  .headerText h2 {
+    font-size: 1.7rem; } }
 
 .about {
   background: #FDF0DF;
@@ -708,7 +715,7 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 5% 0; }
+  margin: 10% 0; }
 
 .projects p {
   font-size: 2.3rem;
@@ -722,8 +729,8 @@ h4 {
   width: 50%;
   padding: 2% 4%;
   background: whitesmoke;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
   margin-left: 2%; }
 
 .projectInfoAlt {
@@ -799,7 +806,7 @@ button:active {
     flex-direction: column-reverse; }
   .projectInfo {
     width: 83%;
-    margin-top: 4%; }
+    margin-top: 8%; }
   .projects h3 {
     margin-bottom: 1%; }
   .projectBox ul {
@@ -820,11 +827,15 @@ button:active {
   .projects p {
     line-height: 25px; }
   .projectImg {
-    width: 90%; } }
+    width: 90%; }
+  .projectInfo {
+    width: 95%; } }
 
 @media (max-width: 500px) {
   .projectImg {
-    width: 100%; } }
+    width: 100%; }
+  .projectBox {
+    margin: 20% 0; } }
 
 .skills {
   position: relative;
@@ -966,7 +977,7 @@ button:active {
   .skills {
     margin-bottom: 20%; }
     .skills:after {
-      height: 115%; } }
+      height: 110%; } }
 
 .contactTitle {
   position: relative;
@@ -1032,7 +1043,8 @@ form {
 
 .contactForm {
   background: #262626;
-  padding-top: 6%; }
+  padding-top: 10%;
+  min-height: 60vh; }
   .contactForm textarea {
     border: 2px solid #B92D12;
     background: #262626;
@@ -1098,6 +1110,10 @@ form {
   align-items: center;
   -ms-flex-preferred-size: 50%;
   flex-basis: 50%; }
+  .formFlexbox button {
+    height: 60px;
+    width: 300px;
+    margin-top: 4%; }
 
 .contactText {
   padding-left: 5%;
@@ -1174,7 +1190,9 @@ form {
   .contactForm p {
     margin-top: 3%; }
   .contactTitle:before {
-    bottom: 60px; } }
+    bottom: 60px; }
+  .contactTitle:after {
+    bottom: -10px; } }
 
 .footer {
   background: #353535;

@@ -465,6 +465,7 @@ h1 {
         width: 90%;
         font-size: 3.5rem;
         line-height: 30px;
+        padding-left: 0;
     }
 
     .headerText h2 {
@@ -474,6 +475,10 @@ h1 {
     .quote {
         height: 6vh;
     }
+
+    .quote::after {
+    height: 186%;
+}
 }
 
 @media (max-width: 400px) {
@@ -481,3 +486,10 @@ h1 {
         font-size: 1rem;
     }
 }
+
+@media (max-width: 350px) {
+    .headerText h2 {
+        font-size: 1.7rem;  
+    }
+}
+
